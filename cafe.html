@@ -1,0 +1,323 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        Mr Mulligans Café
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      .header img {
+        margin-left: 110px;
+        width: 96px;
+      }
+      .header nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .header .buttons a {
+        background-color: #000;
+        border: 2px solid #fff;
+        padding: 10px 20px;
+        margin-left: 10px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 25px;
+      }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 0;
+        }
+        .hero-text {
+            margin-left: 100px;
+            max-width: 50%;
+        }
+        .hero-text h1 {
+            font-size: 3em;
+            color: #bada55;
+        }
+        .hero-text p {
+            font-size: 1.2em;
+        }
+        .hero-text .open-hours {
+            background-color: #bada55;
+            color: #000;
+            padding: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .hero img {
+            margin-right: 50px;
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .section {
+            padding: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .section h2 {
+            color: #a3d421;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            max-width: 95%;
+            font-size: 1.2em;
+        }
+        .section img {
+            margin-left: 102px;
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .section div{
+            margin-left: 20%;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .menu img {
+            margin: 0 123px 30px 0;
+            max-width: 45%;
+            border-radius: 10px;
+        }
+        .menu-list {
+            margin-bottom: 55px;
+            margin-left: 100px;
+            max-width: 50%;
+        }
+        .menu-list h3 {
+            font-size: 1.5em;
+            color: #bada55;
+        }
+        .menu-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu-list ul li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+        .menu-list ul li span {
+            font-size: 1.2em;
+        }
+        .download-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .download-menu a {
+            background-color: #bada55;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #footer {
+        height: 40vh;
+        width: 86.8%;
+        background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6.5vw;
+        padding: 0 100px;
+      }
+      #footer > img {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        z-index: 0;
+      }
+      #f1 img {
+        height: 100px;
+      }
+      #f1,
+      #f2,
+      #f3,
+      #f4 {
+        width: fit-content;
+        position: relative;
+        z-index: 99;
+        /* background-color: red; */
+      }
+      #f2 h3 {
+        font-size: 1.6vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 900;
+        margin-bottom: 8px;
+      }
+
+      #f3 h3 {
+        font-size: 1.6vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      #f4 h4 {
+        font-size: 1vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <!-- <img alt="Sidcup Family Golf Logo" height="50" src="https://storage.googleapis.com/a1aa/image/vdhsnkaymSrxLhFPHZifJeHopNBvCvhF6pIrMfgYZOSMo5jnA.jpg" width="150"/> -->
+        <header class="header">
+            <a href="index.html" target="_blank" style="text-decoration: none;"><img src="logo-white.svg" alt="" /></a>
+            <nav>
+              <a href="new.html" target="_blank" style="text-decoration: none;"> TOPTRACER RANGE </a>
+              <a href="golf_lesson.html" target="_blank" style="text-decoration: none;">GOLF LESSON</a>
+              <a href="#"> CAFE </a>
+              <a href="#"> EVENTS </a>
+            </nav>
+            <div class="buttons">
+              <a href="#"> BOOK RANGE </a>
+              <a href="#"> BOOK GOLF </a>
+            </div>
+          </header>
+    </header>
+    <div class="hero container">
+        <div class="hero-text">
+            <h1>
+                Mr Mulligans Café
+            </h1>
+            <p>
+                Situated between the driving range and Mr Mulligans Dino Golf, this wonderful relaxing spot is open from 9:30am.
+            </p>
+            <div class="open-hours">
+                OPEN: Monday – Sunday from 9:30am
+            </div>
+        </div>
+        <img src="cafe1.jpg" alt="">
+    </div>
+    <div class="section container">
+        <img src="cafe2.avif" style="height: 440px;  width: 110%;" alt="">
+        <div>
+            <h2>
+                Food and Drink
+            </h2>
+            <p>
+                From coffee to pizzas, refuel between practice and games of crazy golf. Don’t fore-get! There’s even something a little stronger for the adults! With hot tasty meals, relaxing snacks and cool refreshing drinks, take a look at our wide range of food and drink options below.
+            </p>
+        </div>
+    </div>
+    <div class="menu container">
+        <div class="menu-list">
+            <h3>
+                Breakfast
+            </h3>
+            <ul>
+                <li>
+                    <span>
+                        English Breakfast Baguette
+                    </span>
+                    <span>
+                        £10.00
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        Veggie Breakfast Baguette
+                    </span>
+                    <span>
+                        £7.50
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        Bacon Baguette
+                    </span>
+                    <span>
+                        £6.00
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        Sausage Baguette
+                    </span>
+                    <span>
+                        £6.00
+                    </span>
+                </li>
+            </ul>
+            <div class="download-menu">
+                <a href="#">
+                    Download Full Menu PDF
+                </a>
+            </div>
+        </div>
+       <img src="cafe3.avif" alt="">    
+    </div>
+    <div id="footer">
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
+          alt=""
+        />
+        <div id="f1">
+          <img
+            src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg"
+            alt=""
+          />
+        </div>
+        <div id="f2">
+          <h3>TOPTRACER Ranges</h3>
+          <h3>Golf Lessons</h3>
+          <h3>Adventure Golf</h3>
+        </div>
+        <div id="f3">
+          <h3>coffee shop</h3>
+          <h3>LEAGUES</h3>
+          <h3>Contact us</h3>
+        </div>
+        <div id="f4">
+          <h4>
+            A20, SIDCUP BYPASS <br />
+            CHISLEHURST <br />
+            KENT <br />
+            BR7 6RP <br />
+            TEL: 0208 309 0181 <br />
+            GET DIRECTIONS <br />
+          </h4>
+        </div>
+      </div>
+</body>
+</html>

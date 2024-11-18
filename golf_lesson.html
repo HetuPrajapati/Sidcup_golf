@@ -1,0 +1,517 @@
+<html>
+  <head>
+    <title>Golf Lessons</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .header1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      .header1 img {
+        margin-left: 110px;
+        width: 96px;
+      }
+      .header1 nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .header1 .buttons a {
+        background-color: #000;
+        border: 2px solid #fff;
+        padding: 10px 20px;
+        margin-left: 10px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 25px;
+      }
+
+      .header h1{
+        color: #a3d200;
+        font-size: 67px;
+      }
+
+      .container .header p{
+        width: 46%;
+        margin-left: 27%;
+        margin-bottom: 32px;
+      }
+
+      .container .header img{
+        width: 50%;
+        height: 75%;
+        border-radius: 20px;
+      }
+
+      .lessons {
+        text-align: center;
+        padding: 50px 0;
+      }
+      .lessons h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .lessons .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 55px;
+      }
+      .lessons .tabs div {
+        font-size: 18px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .lessons .tabs .active {
+        /* background-color: #a3d200; */
+        border-radius: 5px;
+      }
+      .lessons .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .lessons .content img {
+        width: 300px;
+        border-radius: 10px;
+      }
+      .lessons .content .text {
+        background-color: #a3d200;
+        padding: 20px;
+        border-radius: 10px;
+        width: 600px;
+      }
+      .lessons .content .text h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .lessons .content .text p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .nav {
+        background-color: #111;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .nav a.active {
+        color: #a3d200;
+      }
+      .nav .buttons {
+        width: 450px;
+        display: flex;
+        gap: 10px;
+      }
+      .nav .buttons button {
+        background-color: #a3d200;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        width: 300px;
+      }
+      .nav .logo {
+        margin-right: auto;
+        margin-left: 20px;
+      }
+      .nav .logo img {
+        margin-left: 110px;
+        height: 40px;
+      }
+      .professionals {
+        text-align: center;
+        padding: 90px 0 30px;
+      }
+      .professionals h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .professionals .profiles {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .professionals .profiles .profile {
+        width: 33%;
+        text-align: left;
+      }
+      .professionals .profiles .profile img {
+        height: 80%;
+        width: 100%;
+        border-radius: 10px;
+      }
+      .professionals .profiles .profile h3 {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .professionals .profiles .profile p {
+        font-size: 16px;
+        color: #a3d200;
+      }
+      .faq {
+        padding: 50px 0;
+      }
+      .faq h2 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .faq .questions {
+        width: 68%;
+        margin: 0 auto;
+      }
+      .faq .questions .question {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 1px solid #333;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .faq .questions .question:hover {
+        background-color: #222;
+      }
+      .faq .questions .question h3 {
+        font-size: 18px;
+        margin: 0;
+      }
+      .faq .questions .question i {
+        font-size: 18px;
+      }
+      .faq .questions .answer {
+        display: none;
+        padding: 20px;
+        background-color: #222;
+        border-bottom: 1px solid #333;
+      }
+      .explore {
+        text-align: center;
+        padding: 50px 0;
+      }
+      .explore h2 {
+        font-size: 36px;
+        margin-bottom: 48px;
+      }
+      .explore .options {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .explore .options .option {
+        color: #000;
+        background-color: #a3d200;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        font-size: 22px;
+        font-weight: 900;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .explore .options .option img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .explore .options .option:hover img {
+        opacity: 1;
+      }
+      .explore .options .option:hover div {
+        opacity: 0;
+      }
+
+      .option div{
+        padding: 27px;
+      }
+      #footer {
+        height: 40vh;
+        width: 86.8%;
+        background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6.5vw;
+        padding: 0 100px;
+      }
+      #footer > img {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        z-index: 0;
+      }
+      #f1 img {
+        height: 100px;
+      }
+      #f1,
+      #f2,
+      #f3,
+      #f4 {
+        width: fit-content;
+        position: relative;
+        z-index: 99;
+        /* background-color: red; */
+      }
+      #f2 h3 {
+        font-size: 1.6vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 900;
+        margin-bottom: 8px;
+      }
+
+      #f3 h3 {
+        font-size: 1.6vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      #f4 h4 {
+        font-size: 1vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const questions = document.querySelectorAll(".question");
+        questions.forEach((question) => {
+          question.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+            if (answer.style.display === "block") {
+              answer.style.display = "none";
+            } else {
+              answer.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="header1">
+      <a href="index.html" target="_blank" style="text-decoration: none;"><img src="logo-white.svg" alt="" /></a>
+      <nav>
+          <a href="new.html" target="_blank" style="text-decoration: none;"> TOPTRACER RANGE </a>
+          <a href="#">GOLF LESSON </a>
+          <a href="cafe.html" target="_blank" style="text-decoration: none;"> CAFE </a>
+          <a href="#"> EVENTS </a>
+        </nav>
+        <div class="buttons">
+          <a href="#"> BOOK RANGE </a>
+          <a href="#"> BOOK GOLF </a>
+        </div>
+      </header>
+    <div class="container">
+      <div class="header" style="text-align: center;">
+        <h2>YOUR PATH TO PLAYING GOLF</h2>
+        <h1>GOLF LESSONS</h1>
+        <p>
+          Our pros are truly dedicated to your improvement and aim for every
+          student to leave having learnt something and feeling more confident
+          about their golf game.
+        </p>
+        <p>
+          Whether you are beginning your golfing journey or simply looking to
+          improve your game, our PGA qualified professionals offer tailored
+          lessons to best fit your golfing needs.
+        </p>
+        <img src="hello.webp" alt="">
+      </div>
+      <div class="lessons">
+        <h2>OUR GOLF LESSONS</h2>
+        <div class="tabs">
+          <div class="active">INDIVIDUAL LESSONS</div>
+          <div>GROUP LESSONS</div>
+          <div>JUNIOR LESSONS</div>
+        </div>
+        <div class="content">
+          <div class="text" style="width: 300px">
+            <h3 style="">INDIVIDUAL LESSONS</h3>
+            <p style="">
+              Get all the attention you need with a one-to-one lesson. Your golf
+              coach for one-off sessions or a series of sessions will ensure you
+              focus on what matters to you and your game in order to reach your
+              goals whether it be performance or results based.
+            </p>
+          </div>
+          <img src="hello1.avif" alt="">
+          <div class="text" style="width: 300px">
+            <h3 style="">INDIVIDUAL LESSONS</h3>
+            <p style="">
+              Get all the attention you need with a one-to-one lesson. Your golf
+              coach for one-off sessions or a series of sessions will ensure you
+              focus on what matters to you and your game in order to reach your
+              goals whether it be performance or results based.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="professionals">
+        <h2>MEET THE PROFESSIONALS</h2>
+        <div class="profiles">
+          <div class="profile">
+            <img src="hello3.avif" alt="">
+            <h3>PGA Professional</h3>
+            <p>JOEY CARLISLE</p>
+          </div>
+          <div class="profile">
+            <img src="hello4.avif" alt="">
+            <h3>PGA Professional</h3>
+            <p>DAN RICKETT</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="questions">
+          <div class="question">
+            <h3 style="">
+              01 IS EQUIPMENT PROVIDED FOR THE LESSON? ARE BALLS INCLUDED IN THE
+              LESSON?
+            </h3>
+            <i class="fas fa-chevron-down"> </i>
+          </div>
+          <div class="answer">
+            <p>
+              Yes, all equipment including balls is provided for the lesson.
+            </p>
+          </div>
+          <div class="question">
+            <h3 style="">02 WHERE ARE LESSONS TAKEN?</h3>
+            <i class="fas fa-chevron-down"> </i>
+          </div>
+          <div class="answer">
+            <p>Lessons are taken at our state-of-the-art golf facility.</p>
+          </div>
+          <div class="question">
+            <h3 style="">03 WILL TECHNOLOGY BE USED IN EACH LESSON?</h3>
+            <i class="fas fa-chevron-down"> </i>
+          </div>
+          <div class="answer">
+            <p>
+              Yes, we use the latest technology to enhance your learning
+              experience.
+            </p>
+          </div>
+          <div class="question">
+            <h3 style="">04 DO YOU DO LESSONS IN THE EVENING?</h3>
+            <i class="fas fa-chevron-down"> </i>
+          </div>
+          <div class="answer">
+            <p>Yes, we offer evening lessons to accommodate your schedule.</p>
+          </div>
+        </div>
+      </div>
+      <div class="explore">
+        <h2>EXPLORE WHAT ELSE WE DO</h2>
+        <div class="options">
+          <div class="option">
+            <img
+              alt="Toptracer Range"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/pZ4JcvTyumrrIpqEW99Zf6OlHNfTbJiU5MqcVlxaLIffmeOeE.jpg"
+              width="300"
+            />
+            <div>TOPTRACER RANGE</div>
+          </div>
+          <div class="option">
+            <img
+              alt="Café"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/rFel53Xb6PTMfEnjCEBD3AfsXCeJ7DcJBwQ64sjVHsCEneOeE.jpg"
+              width="300"
+            />
+            <div>CAFÉ</div>
+          </div>
+          <div class="option">
+            <img
+              alt="Adventure Golf"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/mI3sqCnDPNKef0m9ks4qUV656WQVMqUcquNcu1BEDgOwp3xTA.jpg"
+              width="300"
+            />
+            <div>ADVENTURE GOLF</div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
+          alt=""
+        />
+        <div id="f1">
+          <img
+            src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg"
+            alt=""
+          />
+        </div>
+        <div id="f2">
+          <h3>TOPTRACER Ranges</h3>
+          <h3>Golf Lessons</h3>
+          <h3>Adventure Golf</h3>
+        </div>
+        <div id="f3">
+          <h3>coffee shop</h3>
+          <h3>LEAGUES</h3>
+          <h3>Contact us</h3>
+        </div>
+        <div id="f4">
+          <h4>
+            A20, SIDCUP BYPASS <br />
+            CHISLEHURST <br />
+            KENT <br />
+            BR7 6RP <br />
+            TEL: 0208 309 0181 <br />
+            GET DIRECTIONS <br />
+          </h4>
+        </div>
+      </div>
+  </body>
+</html>

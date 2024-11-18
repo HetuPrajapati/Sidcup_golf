@@ -1,0 +1,442 @@
+<html>
+  <head>
+    <title>Toptracer Range</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+      .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      .header img {
+        margin-left: 110px;
+        width: 96px;
+      }
+      .header nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .header .buttons a {
+        background-color: #000;
+        border: 2px solid #fff;
+        padding: 10px 20px;
+        margin-left: 10px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 25px;
+      }
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 20px;
+      }
+      .hero .text {
+        margin-left: 80px;
+        max-width: 50%;
+      }
+      .hero h1 {
+        font-size: 48px;
+        color: #c3ff00;
+      }
+      .hero p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .hero img {
+        max-width: 45%;
+        border-radius: 15px;
+      }
+      .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 20px;
+      }
+      .about .text {
+        margin-left: 80px;
+        max-width: 50%;
+      }
+      .about h2 {
+        color: #c3ff00;
+        font-size: 36px;
+      }
+      .about p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .about img {
+        max-width: 45%;
+        border-radius: 15px;
+      }
+      .faq {
+        padding: 50px 20px;
+      }
+      .faq h2 {
+        font-size: 36px;
+        text-align: center;
+      }
+      .faq .item {
+        margin-left: 9%;
+        width: 80%;
+        border-top: 1px solid #c3ff00;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+      .faq .item h3 {
+        font-size: 24px;
+      }
+      .faq .item i {
+        font-size: 24px;
+      }
+      .faq .content {
+        margin-left: 9%;
+    width: 80%;
+        display: none;
+        padding: 10px 0;
+        font-size: 18px;
+      }
+      .carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: scroll;
+        padding: 20px;
+      }
+      .carousel img {
+        width: 300px;
+        margin-right: 20px;
+        border-radius: 15px;
+      }
+      .parties {
+        width: 50%;
+        border-radius: 30px;
+        margin: 21px 360px;
+        background-color: #c3ff00;
+        color: #000;
+        padding: 50px 20px;
+        text-align: center;
+      }
+      .parties h2 {
+        font-size: 45px;
+      }
+      .parties p {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .parties img {
+        width: 300px;
+        margin-top: 20px;
+        border-radius: 15px;
+      }
+      .explore .options {
+        margin: 0 0 45px;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .explore .options .option {
+        color: #000;
+        background-color: #a3d200;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        font-size: 22px;
+        font-weight: 900;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+      }
+      .explore .options .option img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .explore .options .option:hover img {
+        opacity: 1;
+      }
+      .explore .options .option:hover div {
+        opacity: 0;
+      }
+
+      .explore h2{
+        font-size: 35px;
+    text-align: center;
+      }
+
+      .option div {
+        padding-top: 27px;
+        text-align: center;
+      }
+      #footer {
+        height: 40vh;
+        width: 86.8%;
+        background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6.5vw;
+        padding: 0 100px;
+      }
+      #footer > img {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        z-index: 0;
+      }
+      #f1 img {
+        height: 100px;
+      }
+      #f1,
+      #f2,
+      #f3,
+      #f4 {
+        width: fit-content;
+        position: relative;
+        z-index: 99;
+        /* background-color: red; */
+      }
+      #f2 h3 {
+        font-size: 1.6vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 900;
+        margin-bottom: 8px;
+      }
+
+      #f3 h3 {
+        font-size: 1.6vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      #f4 h4 {
+        font-size: 1vw;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var faqItems = document.querySelectorAll(".faq .item");
+        faqItems.forEach(function (item) {
+          item.addEventListener("click", function () {
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="index.html" target="_blank" style="text-decoration: none;"><img src="logo-white.svg" alt="" /></a>
+        <nav>
+          <a href="#"> TOPTRACER RANGE </a>
+          <a href="golf_lesson.html" target="_blank" style="text-decoration: none;">GOLF LESSON</a>
+          <a href="cafe.html" target="_blank" style="text-decoration: none;"> CAFE </a>
+          <a href="#"> EVENTS</a>
+        </nav>
+        <div class="buttons">
+          <a href="#"> BOOK RANGE </a>
+          <a href="#"> BOOK GOLF </a>
+        </div>
+      </header>
+      <section class="hero">
+        <img
+          alt="Person using Toptracer technology on a golf range"
+          height="400"
+          src="https://storage.googleapis.com/a1aa/image/zWmyPnOreN0ReEFeAwnMeNer16XeDz6R8vffnBYWGeKaUcnjnA.jpg"
+          width="600"
+        />
+        <div class="text">
+          <h1>A WHOLE NEW RANGE EXPERIENCE</h1>
+          <h1>TOPTRACER RANGE</h1>
+          <p>
+            Looking for somewhere to enjoy quality time with friends and family
+            or simply have some "me" time. Our floodlit 46-bay multi-tier range
+            features market leading technology in Toptracer that everyone can
+            enjoy. Open until late all week, nothing quite beats a chilled
+            evening session on the range with food and drinks delivered straight
+            to your bay.
+          </p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="text">
+          <h2>ABOUT TOPTRACER</h2>
+          <p>
+            Toptracer shows the flight path of golf balls with valuable shot
+            data, as well as offering in-app games and practice modes. The
+            technology redefines the driving range experience – from a
+            functional training session to an exciting social experience for all
+            ages and abilities. Toptracer also allows you to play the world's
+            most iconic courses at Pebble Beach, Torrey Pines, Royal St.
+            George's and St Andrews.
+          </p>
+        </div>
+        <img
+          alt="People playing golf using Toptracer technology"
+          height="400"
+          src="https://storage.googleapis.com/a1aa/image/vj9X5Q7ZnFLGENgWDnDtfMncZYSeZtsH7D7uO8HZ6SANuzxTA.jpg"
+          width="600"
+        />
+      </section>
+      <section class="faq">
+        <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        <div class="item">
+          <h3>01 CAN I RENT CLUBS?</h3>
+          <i class="fas fa-chevron-down"> </i>
+        </div>
+        <div class="content">
+          <p>
+            Yes, you can rent clubs at our facility. We offer a variety of clubs
+            for different skill levels.
+          </p>
+        </div>
+        <div class="item">
+          <h3>02 CAN I USE THE SHORT GAME AREA?</h3>
+          <i class="fas fa-chevron-down"> </i>
+        </div>
+        <div class="content">
+          <p>
+            Yes, the short game area is available for use. It includes chipping
+            and putting greens to help you improve your short game.
+          </p>
+        </div>
+      </section>
+      <section class="carousel">
+        <img src="tt-nearest-pin.avif" alt="" />
+        <img src="tt-nearest-pin.avif" alt="" />
+        <img src="tt-nearest-pin.avif" alt="" />
+        <img src="tt-points-game10.webp" alt="" />
+        <img src="tt-nearest-pin.avif" alt="" />
+        <img src="tt-points-game10.webp" alt="" />
+      </section>
+      <section class="parties">
+        <h2>PARTIES AND LARGE GROUPS</h2>
+        <p>
+          Hosting a birthday party, corporate event or a large social event?
+          Look no further! Whether you are a golfer or never hit a ball in your
+          life, everyone can play on our Toptracer range.
+        </p>
+        <p>
+          SFG is the perfect place to have some fun with colleagues, friends and
+          family. Our high-tech driving range offers delicious food &amp; drinks
+          straight to your bay whilst you get competitive!
+        </p>
+        <img src="toptracer-groups-2.avif" alt="" />
+      </section>
+      <section class="explore">
+        <h2>EXPLORE WHAT ELSE WE DO</h2>
+        <div class="options">
+          <div class="option">
+            <img
+              alt="Toptracer Range"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/pZ4JcvTyumrrIpqEW99Zf6OlHNfTbJiU5MqcVlxaLIffmeOeE.jpg"
+              width="300"
+            />
+            <div>TOPTRACER RANGE</div>
+          </div>
+          <div class="option">
+            <img
+              alt="Café"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/rFel53Xb6PTMfEnjCEBD3AfsXCeJ7DcJBwQ64sjVHsCEneOeE.jpg"
+              width="300"
+            />
+            <div>CAFÉ</div>
+          </div>
+          <div class="option">
+            <img
+              alt="Adventure Golf"
+              height="200"
+              src="https://storage.googleapis.com/a1aa/image/mI3sqCnDPNKef0m9ks4qUV656WQVMqUcquNcu1BEDgOwp3xTA.jpg"
+              width="300"
+            />
+            <div>ADVENTURE GOLF</div>
+          </div>
+        </div>
+      </section>
+      <div id="footer">
+        <img
+          src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg"
+          alt=""
+        />
+        <div id="f1">
+          <img
+            src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg"
+            alt=""
+          />
+        </div>
+        <div id="f2">
+          <h3>TOPTRACER Ranges</h3>
+          <h3>Golf Lessons</h3>
+          <h3>Adventure Golf</h3>
+        </div>
+        <div id="f3">
+          <h3>coffee shop</h3>
+          <h3>LEAGUES</h3>
+          <h3>Contact us</h3>
+        </div>
+        <div id="f4">
+          <h4>
+            A20, SIDCUP BYPASS <br />
+            CHISLEHURST <br />
+            KENT <br />
+            BR7 6RP <br />
+            TEL: 0208 309 0181 <br />
+            GET DIRECTIONS <br />
+          </h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
